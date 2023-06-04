@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mabatisl.example.mabatis.BrandMapper">
+     <resultMap id="BrandResultMap" type="com.mabatisl.example.mabatis.Brand">
+<!--    对数据库和对象不同名字名字进行统一-->
+    </resultMap>
+<!--   查询数据库中所有数据 <select id="selectAll" resultMap="BrandResultMap">-->
+<!--        select * from tb_brand;-->
+<!--    </select>-->
+    <select id="selectByCondition" resultMap="BrandResultMap">
+        SELECT *
+        FROM tb_brand
+        WHERE status = #{status}
+        AND company_name LIKE #{company_name}
+        AND brand_name LIKE #{brand_name};
+    </select>
+</mapper>
