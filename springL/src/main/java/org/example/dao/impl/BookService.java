@@ -1,4 +1,4 @@
-package org.example.service.impl;
+package org.example.dao.impl;
 
 public interface BookService {
     public void save();
